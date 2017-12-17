@@ -17,12 +17,14 @@ namespace CloseAndDelete
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [Guid(CloseAndDeleteCommandPackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class CloseAndDeleteCommandPackage : Package
+    public sealed class CloseAndDeleteCommandPackage : AsyncPackage
     {
         public const string PackageGuidString = "653ed5b1-beb3-447e-b3ba-72f5ccb222b9";
 
         public CloseAndDeleteCommandPackage()
         { }
+
+		override 
 
         protected override void Initialize()
         {
